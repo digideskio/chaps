@@ -1,0 +1,47 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- Angular Material style sheet -->
+  <link href="dist/css/angular-material.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="chaps" ng-cloak>
+
+  <form class="form-group">
+    <div ng-controller="ChapsController as store">
+      <div ng-repeat="product in store.products">
+        <h1 class="md-display-1"> {{product.name}} </h1>
+        <h2 class="md-display-1"> ${{product.price}} </h2>
+        <p class="md-body-1"> {{product.description}} </p>
+        
+        <md-input-container>
+          <label>Title</label>
+          <input data-ng-model="product.name">
+        </md-input-container>
+        
+        <br />
+          
+        <md-button class="md-raised"> Add to cart </button>
+        </div>    
+    </div>    
+  </form>
+  
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="dist/js/angular.min.js"></script>
+  <script src="dist/js/angular-animate.min.js"></script>
+  <script src="dist/js/angular-aria.min.js"></script>
+  <script src="dist/js/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="dist/js/angular-material.min.js"></script>
+  
+  <!-- Application -->
+  <script src="app.js"></script>
+  
+</body>
+</html>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
